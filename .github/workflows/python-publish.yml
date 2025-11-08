@@ -1,0 +1,28 @@
+name: Run Telegram Bot
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run bot
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.7686902618:AAG9XouZcvEB11aUk-0xq6Zlpj8EOpZKGAc }}
+          OPENAI_API_KEY: ${{ secrets.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 }}
+        run: |
+          python bot.py
