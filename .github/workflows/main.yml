@@ -22,7 +22,7 @@ jobs:
 
       - name: Run bot
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.7686902618:AAG9XouZcvEB11aUk-0xq6Zlpj8EOpZKGAc }}
+          OPENAI_API_KEY: ${{ secrets.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 }}
         run: |
           python bot.py
